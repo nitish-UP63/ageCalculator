@@ -7,7 +7,7 @@ function Body() {
     month: 12, //3
     year: 2000, //22
   });
-
+//   Function to Update DOB of the user
   function updateDOB(event) {
     const currYear = new Date().getFullYear();
     const { name, value } = event.target;
@@ -77,6 +77,7 @@ function Body() {
     
   }
 
+//   Function to calculate the age of the user
   function ageCalculator() {
     const currYear = new Date().getFullYear();
     const currMonth = new Date().getMonth() + 1;
@@ -136,6 +137,8 @@ function Body() {
     const dayString = (age.days > 1) ? " days" : " day";
 
     let ageStr=" ";
+
+    // coditions for displaying the age string
 
     if ((age.years > 0) && (age.months > 0) && (age.days > 0)) {
         ageStr ="You are "+ age.years + yearString + ", " + age.months + monthString + ", and " + age.days + dayString + " old.";
